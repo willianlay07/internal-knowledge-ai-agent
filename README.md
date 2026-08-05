@@ -25,6 +25,8 @@ It combines Retrieval-Augmented Generation (RAG), conversation memory, authentic
 - 🛡️ Role-based Access (Future)
 
 ## 🏗️ Architecture
+
+```text
                     User
                       │
                       ▼

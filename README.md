@@ -1,2 +1,2 @@
 # internal-knowledge-ai-agent
-Production-ready Internal Knowledge AI Agent using FastAPI, RAG, memory, authentication and OpenAI.
+Production-ready Internal Knowledge AI Agent with RAG, Memory, Authentication, FastAPI and OpenAI.

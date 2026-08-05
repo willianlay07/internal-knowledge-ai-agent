@@ -11,3 +11,15 @@ This project is a production-ready AI application that enables organizations to 
 It combines Retrieval-Augmented Generation (RAG), conversation memory, authentication and AI agents to provide accurate, context-aware answers from company knowledge.
 
 > 🚧 This project is currently under active development.
+
+## ✨ Features
+
+- 🔐 User Authentication (JWT)
+- 🤖 AI-powered Question Answering
+- 📚 Retrieval-Augmented Generation (RAG)
+- 🧠 Conversation Memory
+- 📄 Document Knowledge Base
+- 🔍 Semantic Search
+- ⚡ FastAPI REST API
+- 👥 Multi-user Support
+- 🛡️ Role-based Access (Future)

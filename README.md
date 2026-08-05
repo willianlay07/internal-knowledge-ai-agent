@@ -23,3 +23,31 @@ It combines Retrieval-Augmented Generation (RAG), conversation memory, authentic
 - ⚡ FastAPI REST API
 - 👥 Multi-user Support
 - 🛡️ Role-based Access (Future)
+
+## 🏗️ Architecture
+                    User
+                      │
+                      ▼
+              FastAPI REST API
+                      │
+         ┌────────────┴────────────┐
+         ▼                         ▼
+ Authentication              AI Agent
+ (JWT Login)                    │
+                                ▼
+                     Conversation Memory
+                                │
+                                ▼
+                       RAG Retrieval
+                                │
+                    ChromaDB Vector Store
+                                │
+                                ▼
+                     Company Documents
+                                │
+                                ▼
+                        OpenAI API
+                                │
+                                ▼
+                         Final Response
+```

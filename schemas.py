@@ -7,7 +7,7 @@ from datetime import datetime
 
 class RegisterRequest(BaseModel):
     email: EmailStr
-    password_hash: str = Field(
+    password: str = Field(
         min_length=1,
         max_length=500
     )

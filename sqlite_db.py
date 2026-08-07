@@ -71,15 +71,15 @@ def init_db() -> None:
                 created_at TEXT NOT NULL,
 
                 FOREIGN KEY (user_id)
-                REFERENCE users(id)
-                ON DELETE CASCADE
+                    REFERENCES users(id)
+                    ON DELETE CASCADE
             )
         """)
 
         cursor.execute("CREATE INDEX IF NOT EXISTS idx_memories_user_id ON memories(user_id)")
         cursor.execute("CREATE INDEX IF NOT EXISTS idx_conversations_user_id ON conversations(user_id, id DESC)")
 
-        connection.execute()
+        connection.commit()
 
 def create_user(
     email: str,
@@ -125,8 +125,8 @@ def get_user_by_email(
 
         row = cursor.execute("""
             SELECT id, email, password_hash, created_at FROM users WHERE email = ?
-        """, (normalized_email)).fetchone()
+        """, (normalized_email,)).fetchone()
     return row_to_dict(row)
 
-    
+
 

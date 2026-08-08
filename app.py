@@ -3,11 +3,13 @@ from fastapi import FastAPI
 
 from config import validate_config
 from sqlite_db import init_db
+from chroma_db import build_rag_database
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     validate_config()
     init_db()
+    build_rag_database()
 
     yield
 

@@ -20,9 +20,19 @@ ACCESS_TOKEN_EXPIRE_MINUTES = int(
 # ====================
 DB_PATH = BASE_DIR / "database" / "internalknowledgeai.db"
 
+# ====================
+# Chroma DB
+# ====================
+CHROMA_PATH = BASE_DIR / "database" / "chroma_db"
+COLLECTION_NAME = "jewelry_knowledge"
+KNOWLEDGE_FILE = BASE_DIR / "data" / "knowledge.txt"
+
 def validate_config() -> None:
     if not OPENAI_API_KEY:
         raise RuntimeError("Missing OPENAI_API_KEY key.")
 
     if not JWT_SECRET_KEY:
         raise RuntimeError("JWT_SECRET_KEY is missing.")
+
+    if not KNOWLEDGE_FILE:
+        raise RuntimeError("Knowledge file is missing.")
